@@ -20,7 +20,6 @@ export default class Canvas extends React.Component {
 	refresh = () => {
 		setInterval(() => {
 			this.getCanvas()
-			this.getStream()
 		}, 16)
 	}
 
@@ -67,16 +66,6 @@ export default class Canvas extends React.Component {
 			ctx.strokeStyle = key	
 			ctx.strokeRect(val[0], val[1], val[2], val[3])
 		}		
-	}
-
-	getStream = () => {
-		console.log("getting Stream")//, socket.json.io)
-		// socket.json.io.connecting("message", sock=> {
-		// 	console.log("getting Stream2")
-		// 	sock.on("streaming", str => {
-		// 		console.log("str", str)
-		// 	})
-		// })
 	}
 
 	render(){
